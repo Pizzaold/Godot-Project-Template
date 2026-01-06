@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://dhp0hi4qpiu4q"]
+[gd_scene load_steps=5 format=3 uid="uid://dhp0hi4qpiu4q"]
 
 [ext_resource type="Script" uid="uid://4oyg8lu6ei2q" path="res://code/main.gd" id="1_o5qli"]
 [ext_resource type="Script" uid="uid://cpijcl8s7706o" path="res://code/pause.gd" id="2_sugp2"]
+[ext_resource type="Theme" uid="uid://dvindcm6wp5oy" path="res://style/Main Theme.tres" id="3_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://37j7xy23a5rs" path="res://scenes/pause_screen.tscn" id="3_sugp2"]
 
 [node name="Main" type="Control"]
@@ -29,6 +30,7 @@ offset_right = 66.5
 offset_bottom = 15.5
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("3_jyhfs")
 text = "Get More Points"
 
 [node name="Label" type="Label" parent="."]
@@ -50,6 +52,7 @@ text = "Points: "
 layout_mode = 0
 offset_right = 8.0
 offset_bottom = 8.0
+theme = ExtResource("3_jyhfs")
 text = "Save"
 
 [node name="PauseScreen" parent="." instance=ExtResource("3_sugp2")]

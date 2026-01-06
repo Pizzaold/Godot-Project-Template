@@ -1,9 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://bijrvpdvir46s"]
+[gd_scene load_steps=3 format=3 uid="uid://bijrvpdvir46s"]
 
 [ext_resource type="Script" uid="uid://bi6ug8r52luxl" path="res://code/save_slot.gd" id="1_7sf3s"]
+[ext_resource type="Theme" uid="uid://dvindcm6wp5oy" path="res://style/Main Theme.tres" id="1_d6rws"]
 
 [node name="SaveSlot" type="Button"]
 custom_minimum_size = Vector2(250, 50)
+theme = ExtResource("1_d6rws")
 script = ExtResource("1_7sf3s")
 
 [node name="Title" type="Label" parent="."]

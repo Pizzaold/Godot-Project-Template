@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://37j7xy23a5rs"]
+[gd_scene load_steps=4 format=3 uid="uid://37j7xy23a5rs"]
 
 [ext_resource type="PackedScene" uid="uid://dqjo1wl275mf" path="res://scenes/screen_toggle.tscn" id="1_gchx3"]
 [ext_resource type="Script" uid="uid://utfnkwiro4bp" path="res://code/pause_screen.gd" id="1_qeunj"]
+[ext_resource type="Theme" uid="uid://dvindcm6wp5oy" path="res://style/Main Theme.tres" id="2_hr2n2"]
 
 [node name="PauseScreen" type="Control"]
 layout_mode = 3
@@ -37,14 +38,17 @@ grow_vertical = 2
 
 [node name="Continue" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+theme = ExtResource("2_hr2n2")
 text = "Continue"
 
 [node name="Main Menu" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+theme = ExtResource("2_hr2n2")
 text = "Main Menu"
 
 [node name="Quit" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+theme = ExtResource("2_hr2n2")
 text = "Quit"
 
 [node name="Screen Toggle" parent="." instance=ExtResource("1_gchx3")]

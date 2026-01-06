@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://duuhs7l2tfpcv"]
+[gd_scene load_steps=5 format=3 uid="uid://duuhs7l2tfpcv"]
 
 [ext_resource type="Script" uid="uid://cmkk2mm2dp6ho" path="res://code/settings.gd" id="1_r6d6q"]
 [ext_resource type="Script" uid="uid://bf2psyse02hv0" path="res://code/audio_controller.gd" id="2_6wm04"]
 [ext_resource type="PackedScene" uid="uid://dqjo1wl275mf" path="res://scenes/screen_toggle.tscn" id="3_6wm04"]
+[ext_resource type="Theme" uid="uid://dvindcm6wp5oy" path="res://style/Main Theme.tres" id="3_f4mfi"]
 
 [node name="Settings" type="Control"]
 layout_mode = 3
@@ -65,6 +66,7 @@ custom_minimum_size = Vector2(86, 36)
 layout_mode = 0
 offset_right = 8.0
 offset_bottom = 8.0
+theme = ExtResource("3_f4mfi")
 text = "Back
 "
 
@@ -80,6 +82,7 @@ offset_left = -78.0
 offset_top = -34.0
 grow_horizontal = 0
 grow_vertical = 0
+theme = ExtResource("3_f4mfi")
 text = "Credits"
 
 [node name="Screen Toggle" parent="." instance=ExtResource("3_6wm04")]

@@ -1,5 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://dqjo1wl275mf"]
+[gd_scene load_steps=4 format=3 uid="uid://dqjo1wl275mf"]
 
+[ext_resource type="Theme" uid="uid://dvindcm6wp5oy" path="res://style/Main Theme.tres" id="1_lxbak"]
 [ext_resource type="Texture2D" uid="uid://0id8ny70j17i" path="res://art/FullScreen.png" id="1_m111q"]
 [ext_resource type="Script" uid="uid://eav2ktqlk28c" path="res://code/screen_toggle.gd" id="1_n4ela"]
 
@@ -12,6 +13,7 @@ offset_top = 3.0
 offset_right = -3.0
 offset_bottom = 25.0
 grow_horizontal = 0
+theme = ExtResource("1_lxbak")
 script = ExtResource("1_n4ela")
 
 [node name="FullScreen" type="Sprite2D" parent="."]
