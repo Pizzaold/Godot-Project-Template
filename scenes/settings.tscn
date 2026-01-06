@@ -1,0 +1,93 @@
+[gd_scene load_steps=4 format=3 uid="uid://duuhs7l2tfpcv"]
+
+[ext_resource type="Script" uid="uid://cmkk2mm2dp6ho" path="res://code/settings.gd" id="1_r6d6q"]
+[ext_resource type="Script" uid="uid://bf2psyse02hv0" path="res://code/audio_controller.gd" id="2_6wm04"]
+[ext_resource type="PackedScene" uid="uid://dqjo1wl275mf" path="res://scenes/screen_toggle.tscn" id="3_6wm04"]
+
+[node name="Settings" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_r6d6q")
+
+[node name="AudioBuss" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -264.0
+offset_top = -68.5
+offset_right = 264.0
+offset_bottom = 68.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Master text" type="Label" parent="AudioBuss"]
+layout_mode = 2
+text = "Master Volume"
+
+[node name="Master" type="HSlider" parent="AudioBuss"]
+layout_mode = 2
+max_value = 1.0
+step = 0.01
+value = 1.0
+script = ExtResource("2_6wm04")
+
+[node name="Music text" type="Label" parent="AudioBuss"]
+layout_mode = 2
+text = "Music Volume"
+
+[node name="Music" type="HSlider" parent="AudioBuss"]
+layout_mode = 2
+max_value = 1.0
+step = 0.01
+value = 1.0
+script = ExtResource("2_6wm04")
+
+[node name="SFX Label" type="Label" parent="AudioBuss"]
+layout_mode = 2
+text = "SFX Volume"
+
+[node name="SFX" type="HSlider" parent="AudioBuss"]
+layout_mode = 2
+max_value = 1.0
+step = 0.01
+value = 1.0
+script = ExtResource("2_6wm04")
+
+[node name="Back" type="Button" parent="."]
+custom_minimum_size = Vector2(86, 36)
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+text = "Back
+"
+
+[node name="Credits" type="Button" parent="."]
+custom_minimum_size = Vector2(86, 36)
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -78.0
+offset_top = -34.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Credits"
+
+[node name="Screen Toggle" parent="." instance=ExtResource("3_6wm04")]
+layout_mode = 1
+offset_left = -22.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 22.0
+
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="Credits" to="." method="_on_credits_pressed"]

@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://dqjo1wl275mf"]
+
+[ext_resource type="Texture2D" uid="uid://0id8ny70j17i" path="res://art/FullScreen.png" id="1_m111q"]
+[ext_resource type="Script" uid="uid://eav2ktqlk28c" path="res://code/screen_toggle.gd" id="1_n4ela"]
+
+[node name="Screen Toggle" type="Button"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -25.0
+offset_top = 3.0
+offset_right = -3.0
+offset_bottom = 25.0
+grow_horizontal = 0
+script = ExtResource("1_n4ela")
+
+[node name="FullScreen" type="Sprite2D" parent="."]
+position = Vector2(11, 11)
+scale = Vector2(1.375, 1.375)
+texture = ExtResource("1_m111q")

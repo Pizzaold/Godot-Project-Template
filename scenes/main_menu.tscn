@@ -1,0 +1,88 @@
+[gd_scene load_steps=3 format=3 uid="uid://dsvqgrglmkp80"]
+
+[ext_resource type="Script" uid="uid://4qdj337x8e6m" path="res://code/main_menu.gd" id="1_ekxnf"]
+[ext_resource type="PackedScene" uid="uid://dqjo1wl275mf" path="res://scenes/screen_toggle.tscn" id="2_ekxnf"]
+
+[node name="Main Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ekxnf")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -194.0
+offset_top = -190.0
+offset_right = 194.0
+offset_bottom = -102.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 64
+text = "GAME NAME"
+
+[node name="Play" type="Button" parent="."]
+custom_minimum_size = Vector2(86, 36)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -23.5
+offset_top = -15.5
+offset_right = 23.5
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "PLAY"
+
+[node name="Settings" type="Button" parent="."]
+custom_minimum_size = Vector2(86, 36)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -43.0
+offset_top = 26.0
+offset_right = 43.0
+offset_bottom = 62.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "SETTINGS"
+
+[node name="Quit" type="Button" parent="."]
+custom_minimum_size = Vector2(86, 36)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -43.0
+offset_top = 70.0
+offset_right = 43.0
+offset_bottom = 106.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "QUIT"
+
+[node name="Screen Toggle" parent="." instance=ExtResource("2_ekxnf")]
+layout_mode = 1
+offset_left = -22.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 22.0
+
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]

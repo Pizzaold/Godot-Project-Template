@@ -1,0 +1,68 @@
+[gd_scene load_steps=2 format=3 uid="uid://b787wd7grufgk"]
+
+[ext_resource type="Script" uid="uid://l7sobf6a1wpb" path="res://code/credits.gd" id="1_0bpdh"]
+
+[node name="Credits" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0bpdh")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 32
+text = "
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Lorem Ipsum1
+Lorem Ipsum2
+Lorem Ipsum3
+Lorem Ipsum4
+Lorem Ipsum5
+Lorem Ipsum6
+Lorem Ipsum7
+Lorem Ipsum8
+Lorem Ipsum9
+Lorem Ipsum10
+Lorem Ipsum11
+Lorem Ipsum12
+Lorem Ipsum13
+Lorem Ipsum14
+Lorem Ipsum15
+Lorem Ipsum16
+Lorem Ipsum17
+Lorem Ipsum18
+Lorem Ipsum19
+Lorem Ipsum20"
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Back" type="Button" parent="."]
+custom_minimum_size = Vector2(86, 36)
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+text = "Back"
+
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]

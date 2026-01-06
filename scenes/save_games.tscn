@@ -1,0 +1,52 @@
+[gd_scene load_steps=4 format=3 uid="uid://u1cblnabii7o"]
+
+[ext_resource type="Script" uid="uid://c52b1ctefwxhf" path="res://code/save_games.gd" id="1_xn7kk"]
+[ext_resource type="PackedScene" uid="uid://bijrvpdvir46s" path="res://scenes/save_slot.tscn" id="2_qtcyq"]
+[ext_resource type="PackedScene" uid="uid://dqjo1wl275mf" path="res://scenes/screen_toggle.tscn" id="2_vbkkr"]
+
+[node name="SaveGames" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xn7kk")
+
+[node name="Back" type="Button" parent="."]
+custom_minimum_size = Vector2(86, 36)
+layout_mode = 1
+offset_right = 86.0
+offset_bottom = 36.0
+text = "Back"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 24
+
+[node name="SaveSlot" parent="VBoxContainer" instance=ExtResource("2_qtcyq")]
+layout_mode = 2
+
+[node name="SaveSlot2" parent="VBoxContainer" instance=ExtResource("2_qtcyq")]
+layout_mode = 2
+slot_number = 1
+
+[node name="SaveSlot3" parent="VBoxContainer" instance=ExtResource("2_qtcyq")]
+layout_mode = 2
+slot_number = 2
+
+[node name="Screen Toggle" parent="." instance=ExtResource("2_vbkkr")]
+layout_mode = 1
+offset_left = -22.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 22.0
+
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
