@@ -34,3 +34,8 @@ func choose_game(save_file: String) -> void:
 		GM.current_save = save_file
 		print("Starting new game in slot: ", save_file)
 		GM.change_scene(GM.MAIN)
+
+
+func _on_delete_pressed() -> void:
+	SM.delete_save(SM.SAVE_FILES[slot_number])
+	update_save_button(SM.SAVE_FILES[slot_number], title, last_played, other)
