@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://utfnkwiro4bp" path="res://Pause/pause_screen.gd" id="1_qeunj"]
 [ext_resource type="Theme" uid="uid://dvindcm6wp5oy" path="res://MainTheme.tres" id="2_hr2n2"]
 
-[node name="PauseScreen" type="Control"]
+[node name="PauseScreen" type="Control" unique_id=1420579124]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -13,7 +13,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_qeunj")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=985089524]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -22,7 +22,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0.39215687)
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1927413799]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -36,22 +36,22 @@ offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Continue" type="Button" parent="VBoxContainer"]
+[node name="Continue" type="Button" parent="VBoxContainer" unique_id=497819631]
 layout_mode = 2
 theme = ExtResource("2_hr2n2")
 text = "Continue"
 
-[node name="Main Menu" type="Button" parent="VBoxContainer"]
+[node name="Main Menu" type="Button" parent="VBoxContainer" unique_id=32060441]
 layout_mode = 2
 theme = ExtResource("2_hr2n2")
 text = "Main Menu"
 
-[node name="Quit" type="Button" parent="VBoxContainer"]
+[node name="Quit" type="Button" parent="VBoxContainer" unique_id=814589715]
 layout_mode = 2
 theme = ExtResource("2_hr2n2")
 text = "Quit"
 
-[node name="Screen Toggle" parent="." instance=ExtResource("1_gchx3")]
+[node name="Screen Toggle" parent="." unique_id=1794532186 instance=ExtResource("1_gchx3")]
 layout_mode = 1
 offset_left = -22.0
 offset_top = 0.0

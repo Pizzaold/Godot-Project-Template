@@ -1,10 +1,13 @@
 extends Control
 
 @onready var rich_text_label: RichTextLabel = $RichTextLabel
-var scroll_speed: float = 40.0
+var scroll_speed: float = 100.0
+var scroll_bar: VScrollBar
 
-func _physics_process(delta: float) -> void:
-	var scroll_bar = rich_text_label.get_v_scroll_bar()
+func _ready() -> void:
+	scroll_bar = rich_text_label.get_v_scroll_bar()
+
+func _process(delta: float) -> void:
 	scroll_bar.value += scroll_speed * delta
 
 func _on_back_pressed() -> void:

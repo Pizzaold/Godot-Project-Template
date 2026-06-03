@@ -10,7 +10,7 @@ func _on_button_pressed() -> void:
 	GameManager.point += 1
 	update_label()
 
-func update_label():
+func update_label() -> void:
 	label.text = "Points: %d" % GameManager.point 
 
 func _on_save_pressed() -> void:

@@ -13,6 +13,7 @@ func _on_main_menu_pressed() -> void:
 	get_tree().paused = false
 	SaveManager.save_game(GameManager.current_save)
 	SceneManager.change_scene(SceneManager.MAIN_MENU)
+	GameManager.point = 0
 
 func _on_quit_pressed() -> void:
 	get_tree().paused = false

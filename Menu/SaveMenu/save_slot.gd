@@ -28,12 +28,11 @@ func choose_game(save_file: String) -> void:
 	if SaveManager.has_save_file(save_file):
 		SaveManager.load_game(save_file)
 		GameManager.current_save = save_file
-		SceneManager.change_scene(SceneManager.MAIN)
 		print("Loading game from: ", save_file)
 	else:
 		GameManager.current_save = save_file
 		print("Starting new game in slot: ", save_file)
-		SceneManager.change_scene(SceneManager.MAIN)
+	SceneManager.change_scene(SceneManager.MAIN)
 
 
 func _on_delete_pressed() -> void:

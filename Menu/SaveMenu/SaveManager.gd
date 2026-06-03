@@ -6,53 +6,46 @@ const SAVE_FILE0: String = "user://savegame0.save"
 const SAVE_FILE1: String = "user://savegame1.save"
 const SAVE_FILE2: String = "user://savegame2.save"
 
-func save_game(SAVE_FILE) -> void:
-	var save_file = FileAccess.open(SAVE_FILE, FileAccess.WRITE)
+func save_game(save_file_path: String) -> void:
+	var save_file = FileAccess.open(save_file_path, FileAccess.WRITE)
 	if save_file == null:
 		print("Failed to open save file for writing")
 		return
-	
-	var save_dict = {
-		"points": GameManager.point,
-		"timestamp": format_time(),
-		"has_save": true
-	}
-	
+
+	var save_dict = GameManager.get_save_data()
+	save_dict["timestamp"] = format_time()
+	save_dict["has_save"] = true
+
 	save_file.store_string(JSON.stringify(save_dict))
 	save_file.close()
-	print("Game saved successfully")
 
-func load_game(SAVE_FILE) -> bool:
-	if not FileAccess.file_exists(SAVE_FILE):
+func load_game(save_file_path: String) -> bool:
+	if not FileAccess.file_exists(save_file_path):
 		print("No save file found")
 		return false
-	
-	var save_file = FileAccess.open(SAVE_FILE, FileAccess.READ)
+
+	var save_file = FileAccess.open(save_file_path, FileAccess.READ)
 	if save_file == null:
 		print("Failed to open save file for reading")
 		return false
-	
+
 	var json_string = save_file.get_as_text()
 	save_file.close()
-	
+
 	var json = JSON.new()
 	var parse_result = json.parse(json_string)
 	if parse_result != OK:
-		print("Failed to parse save file")
 		return false
-	
-	var save_data = json.data
-	
-	GameManager.point = save_data.get("points", 0)
-	
-	print("Game loaded successfully")
+
+	GameManager.apply_save_data(json.data)
+
 	return true
 
-func get_save_data(SAVE_FILE) -> Dictionary:
-	if not FileAccess.file_exists(SAVE_FILE):
+func get_save_data(save_file_path: String) -> Dictionary:
+	if not FileAccess.file_exists(save_file_path):
 		return {}
-	
-	var save_file = FileAccess.open(SAVE_FILE, FileAccess.READ)
+
+	var save_file = FileAccess.open(save_file_path, FileAccess.READ)
 	if save_file == null:
 		return {}
 	
@@ -66,13 +59,12 @@ func get_save_data(SAVE_FILE) -> Dictionary:
 	
 	return json.data
 
-func has_save_file(SAVE_FILE) -> bool:
-	return FileAccess.file_exists(SAVE_FILE)
+func has_save_file(save_file_path: String) -> bool:
+	return FileAccess.file_exists(save_file_path)
 
-func delete_save(SAVE_FILE) -> void:
-	if FileAccess.file_exists(SAVE_FILE):
-		DirAccess.remove_absolute(SAVE_FILE)
-		print("Save file deleted")
+func delete_save(save_file_path: String) -> void:
+	if FileAccess.file_exists(save_file_path):
+		DirAccess.remove_absolute(save_file_path)
 
 func format_time() -> String:
 	var time = Time.get_time_string_from_system().left(-3)
