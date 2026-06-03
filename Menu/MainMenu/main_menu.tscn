@@ -1,10 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://dsvqgrglmkp80"]
+[gd_scene format=3 uid="uid://dsvqgrglmkp80"]
 
-[ext_resource type="Script" uid="uid://4qdj337x8e6m" path="res://code/main_menu.gd" id="1_ekxnf"]
-[ext_resource type="Theme" uid="uid://dvindcm6wp5oy" path="res://style/Main Theme.tres" id="2_bqqt6"]
-[ext_resource type="PackedScene" uid="uid://dqjo1wl275mf" path="res://scenes/screen_toggle.tscn" id="2_ekxnf"]
+[ext_resource type="Script" uid="uid://4qdj337x8e6m" path="res://Menu/MainMenu/main_menu.gd" id="1_ekxnf"]
+[ext_resource type="Theme" uid="uid://dvindcm6wp5oy" path="res://MainTheme.tres" id="2_bqqt6"]
+[ext_resource type="PackedScene" uid="uid://dqjo1wl275mf" path="res://Menu/MainMenu/screen_toggle.tscn" id="2_ekxnf"]
 
-[node name="Main Menu" type="Control"]
+[node name="Main Menu" type="Control" unique_id=1271333759]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -13,7 +13,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ekxnf")
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="." unique_id=59116282]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -29,7 +29,7 @@ grow_vertical = 2
 theme_override_font_sizes/font_size = 64
 text = "GAME NAME"
 
-[node name="Play" type="Button" parent="."]
+[node name="Play" type="Button" parent="." unique_id=435035868]
 custom_minimum_size = Vector2(86, 36)
 layout_mode = 1
 anchors_preset = 8
@@ -46,7 +46,7 @@ grow_vertical = 2
 theme = ExtResource("2_bqqt6")
 text = "PLAY"
 
-[node name="Settings" type="Button" parent="."]
+[node name="Settings" type="Button" parent="." unique_id=1696682735]
 custom_minimum_size = Vector2(86, 36)
 layout_mode = 1
 anchors_preset = 8
@@ -63,7 +63,7 @@ grow_vertical = 2
 theme = ExtResource("2_bqqt6")
 text = "SETTINGS"
 
-[node name="Quit" type="Button" parent="."]
+[node name="Quit" type="Button" parent="." unique_id=829303003]
 custom_minimum_size = Vector2(86, 36)
 layout_mode = 1
 anchors_preset = 8
@@ -80,7 +80,7 @@ grow_vertical = 2
 theme = ExtResource("2_bqqt6")
 text = "QUIT"
 
-[node name="Screen Toggle" parent="." instance=ExtResource("2_ekxnf")]
+[node name="Screen Toggle" parent="." unique_id=855463275 instance=ExtResource("2_ekxnf")]
 layout_mode = 1
 offset_left = -22.0
 offset_top = 0.0

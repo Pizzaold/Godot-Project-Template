@@ -1,9 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://u1cblnabii7o"]
+[gd_scene format=3 uid="uid://u1cblnabii7o"]
 
-[ext_resource type="Script" uid="uid://c52b1ctefwxhf" path="res://code/save_games.gd" id="1_xn7kk"]
-[ext_resource type="Theme" uid="uid://dvindcm6wp5oy" path="res://style/Main Theme.tres" id="2_o84xe"]
-[ext_resource type="PackedScene" uid="uid://bijrvpdvir46s" path="res://scenes/save_slot.tscn" id="2_qtcyq"]
-[ext_resource type="PackedScene" uid="uid://dqjo1wl275mf" path="res://scenes/screen_toggle.tscn" id="2_vbkkr"]
+[ext_resource type="Script" uid="uid://c52b1ctefwxhf" path="res://Menu/SaveMenu/save_games.gd" id="1_xn7kk"]
+[ext_resource type="Theme" uid="uid://dvindcm6wp5oy" path="res://MainTheme.tres" id="2_o84xe"]
+[ext_resource type="PackedScene" uid="uid://bijrvpdvir46s" path="res://Menu/SaveMenu/save_slot.tscn" id="2_qtcyq"]
+[ext_resource type="PackedScene" uid="uid://dqjo1wl275mf" path="res://Menu/MainMenu/screen_toggle.tscn" id="2_vbkkr"]
 
 [node name="SaveGames" type="Control"]
 layout_mode = 3

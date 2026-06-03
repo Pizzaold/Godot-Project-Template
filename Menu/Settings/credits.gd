@@ -8,4 +8,4 @@ func _physics_process(delta: float) -> void:
 	scroll_bar.value += scroll_speed * delta
 
 func _on_back_pressed() -> void:
-	GM.change_scene(GM.SETTINGS)
+	SceneManager.change_scene(SceneManager.SETTINGS)

@@ -13,7 +13,7 @@ func save_game(SAVE_FILE) -> void:
 		return
 	
 	var save_dict = {
-		"points": GM.point,
+		"points": GameManager.point,
 		"timestamp": format_time(),
 		"has_save": true
 	}
@@ -43,7 +43,7 @@ func load_game(SAVE_FILE) -> bool:
 	
 	var save_data = json.data
 	
-	GM.point = save_data.get("points", 0)
+	GameManager.point = save_data.get("points", 0)
 	
 	print("Game loaded successfully")
 	return true

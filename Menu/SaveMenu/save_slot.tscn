@@ -1,8 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://bijrvpdvir46s"]
+[gd_scene format=3 uid="uid://bijrvpdvir46s"]
 
-[ext_resource type="Script" uid="uid://bi6ug8r52luxl" path="res://code/save_slot.gd" id="1_7sf3s"]
-[ext_resource type="Theme" uid="uid://dvindcm6wp5oy" path="res://style/Main Theme.tres" id="1_d6rws"]
-[ext_resource type="Texture2D" uid="uid://csatss4g7wrlo" path="res://art/trash-can-solid-full.svg" id="3_332xg"]
+[ext_resource type="Script" uid="uid://bi6ug8r52luxl" path="res://Menu/SaveMenu/save_slot.gd" id="1_7sf3s"]
+[ext_resource type="Theme" uid="uid://dvindcm6wp5oy" path="res://MainTheme.tres" id="1_d6rws"]
+[ext_resource type="Texture2D" uid="uid://csatss4g7wrlo" path="res://Menu/SaveMenu/trash-can-solid-full.svg" id="3_332xg"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2uv05"]
 

@@ -1,8 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://dqjo1wl275mf"]
+[gd_scene format=3 uid="uid://dqjo1wl275mf"]
 
-[ext_resource type="Theme" uid="uid://dvindcm6wp5oy" path="res://style/Main Theme.tres" id="1_lxbak"]
-[ext_resource type="Texture2D" uid="uid://0id8ny70j17i" path="res://art/FullScreen.png" id="1_m111q"]
-[ext_resource type="Script" uid="uid://eav2ktqlk28c" path="res://code/screen_toggle.gd" id="1_n4ela"]
+[ext_resource type="Theme" uid="uid://dvindcm6wp5oy" path="res://MainTheme.tres" id="1_lxbak"]
+[ext_resource type="Texture2D" uid="uid://0id8ny70j17i" path="res://Menu/MainMenu/FullScreen.png" id="1_m111q"]
+[ext_resource type="Script" uid="uid://eav2ktqlk28c" path="res://Menu/MainMenu/screen_toggle.gd" id="1_n4ela"]
 
 [node name="Screen Toggle" type="Button"]
 anchors_preset = 1

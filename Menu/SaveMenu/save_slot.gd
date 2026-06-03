@@ -7,13 +7,13 @@ extends Button
 @onready var other: Label = $Other
 
 func _ready() -> void:
-	update_save_button(SM.SAVE_FILES[slot_number], title, last_played, other)
+	update_save_button(SaveManager.SAVE_FILES[slot_number], title, last_played, other)
 
 func _pressed() -> void:
-	choose_game(SM.SAVE_FILES[slot_number])
+	choose_game(SaveManager.SAVE_FILES[slot_number])
 
 func update_save_button(save_file: String, name_label: Label, time_label: Label, points_label: Label) -> void:
-	var save_data = SM.get_save_data(save_file)
+	var save_data = SaveManager.get_save_data(save_file)
 	
 	if save_data.is_empty():
 		name_label.text = "Slot %d - Empty" % slot_number
@@ -25,17 +25,17 @@ func update_save_button(save_file: String, name_label: Label, time_label: Label,
 		points_label.text = "Points: %d" % save_data.get("points", 0)
 
 func choose_game(save_file: String) -> void:
-	if SM.has_save_file(save_file):
-		SM.load_game(save_file)
-		GM.current_save = save_file
-		GM.change_scene(GM.MAIN)
+	if SaveManager.has_save_file(save_file):
+		SaveManager.load_game(save_file)
+		GameManager.current_save = save_file
+		SceneManager.change_scene(SceneManager.MAIN)
 		print("Loading game from: ", save_file)
 	else:
-		GM.current_save = save_file
+		GameManager.current_save = save_file
 		print("Starting new game in slot: ", save_file)
-		GM.change_scene(GM.MAIN)
+		SceneManager.change_scene(SceneManager.MAIN)
 
 
 func _on_delete_pressed() -> void:
-	SM.delete_save(SM.SAVE_FILES[slot_number])
-	update_save_button(SM.SAVE_FILES[slot_number], title, last_played, other)
+	SaveManager.delete_save(SaveManager.SAVE_FILES[slot_number])
+	update_save_button(SaveManager.SAVE_FILES[slot_number], title, last_played, other)

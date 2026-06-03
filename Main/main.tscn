@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://dhp0hi4qpiu4q"]
+
+[ext_resource type="Script" uid="uid://4oyg8lu6ei2q" path="res://Main/main.gd" id="1_eunhr"]
+[ext_resource type="Script" uid="uid://cpijcl8s7706o" path="res://Pause/pause.gd" id="2_k3v36"]
+[ext_resource type="Theme" uid="uid://dvindcm6wp5oy" path="res://MainTheme.tres" id="3_liyct"]
+[ext_resource type="PackedScene" uid="uid://37j7xy23a5rs" path="res://Pause/pause_screen.tscn" id="4_ib3t1"]
+
+[node name="Main" type="Control" unique_id=418120733]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_eunhr")
+
+[node name="Pause" type="Node" parent="." unique_id=1550967964]
+script = ExtResource("2_k3v36")
+
+[node name="Points" type="Button" parent="." unique_id=626322188]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -66.5
+offset_top = -15.5
+offset_right = 66.5
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_liyct")
+text = "Get More Points"
+
+[node name="Label" type="Label" parent="." unique_id=452543692]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -24.5
+offset_top = -78.0
+offset_right = 24.5
+offset_bottom = -55.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Points: "
+
+[node name="Save" type="Button" parent="." unique_id=1720386954]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+theme = ExtResource("3_liyct")
+text = "Save"
+
+[node name="PauseScreen" parent="." unique_id=1198964041 instance=ExtResource("4_ib3t1")]
+visible = false
+layout_mode = 1
+
+[connection signal="pressed" from="Points" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Save" to="." method="_on_save_pressed"]

@@ -1,8 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://37j7xy23a5rs"]
+[gd_scene format=3 uid="uid://37j7xy23a5rs"]
 
-[ext_resource type="PackedScene" uid="uid://dqjo1wl275mf" path="res://scenes/screen_toggle.tscn" id="1_gchx3"]
-[ext_resource type="Script" uid="uid://utfnkwiro4bp" path="res://code/pause_screen.gd" id="1_qeunj"]
-[ext_resource type="Theme" uid="uid://dvindcm6wp5oy" path="res://style/Main Theme.tres" id="2_hr2n2"]
+[ext_resource type="PackedScene" uid="uid://dqjo1wl275mf" path="res://Menu/MainMenu/screen_toggle.tscn" id="1_gchx3"]
+[ext_resource type="Script" uid="uid://utfnkwiro4bp" path="res://Pause/pause_screen.gd" id="1_qeunj"]
+[ext_resource type="Theme" uid="uid://dvindcm6wp5oy" path="res://MainTheme.tres" id="2_hr2n2"]
 
 [node name="PauseScreen" type="Control"]
 layout_mode = 3

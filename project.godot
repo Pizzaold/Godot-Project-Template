@@ -21,12 +21,13 @@ config/icon="res://icon.svg"
 
 [audio]
 
-buses/default_bus_layout="res://audio/default_bus_layout.tres"
+buses/default_bus_layout="res://Audio/default_bus_layout.tres"
 
 [autoload]
 
-GM="*res://managers/GameManager.gd"
-SM="*res://managers/SaveManager.gd"
+GameManager="*res://GameManager.gd"
+SaveManager="*res://Menu/SaveMenu/SaveManager.gd"
+SceneManager="*uid://cocnr071kwhrg"
 
 [display]
 
