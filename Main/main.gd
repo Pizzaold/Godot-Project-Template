@@ -1,6 +1,5 @@
 extends Control
 
-@onready var button: Button = $Button
 @onready var label: Label = $Label
 
 func _ready() -> void:
